@@ -26,9 +26,9 @@ public class JobHandler {
 		
 		if(yearlySalary < 10000){
 			currentRank = 20;
-		}else if(yearlySalary < 50000){
+		}else if(yearlySalary < 50000 && yearlySalary >= 10000){
 			currentRank = 40;
-		}else if(yearlySalary < 100000){
+		}else if(yearlySalary < 100000 && yearlySalary >= 50000){
 			currentRank = 60;
 		}else if(yearlySalary >= 100000){
 			currentRank = 80;
@@ -45,9 +45,11 @@ public class JobHandler {
 			
 		case 2:
 			warningDeRank = 10;
+			break;
 			
 		case 3: 
 			warningDeRank = 15;
+			break;
 			
 		default:
 			warningDeRank = warningTotals * 6;
